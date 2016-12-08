@@ -6,7 +6,7 @@
 	<groupId>net.slipp</groupId>
 	<artifactId>my-jwp2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>my-jwp2</name>
 	<description>Demo project for Spring Boot</description>
@@ -50,8 +50,14 @@
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<version>1.4.193</version>
+			<artifactId>h2</artifactId>			
+		</dependency>
+		
+		<!-- war deploy시 내장톰캣 제거.. -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>
